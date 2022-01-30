@@ -52,26 +52,18 @@ function saveHighScore() {
     localStorage.setItem("highScores", JSON.stringify(highScores));
     highScoresPrompt.style.display = "none";
     highScoresEL.style.display = "flex";
-    // displayHS();
-    // console.log(highScores);
-    for (let index = 0; index < highScores.length; index++) {
-      const makeLI = document.createElement("li");
-      makeLI.innerText = highScores[index].score + highScores[index].name;
-      console.log(highScores[index]);
-      highScoresLI.appendChild(makeLI);
-    }
+    displayHS();
   });
 }
 
 // insert highscores from local storage in to element
-
-// function displayHS() {
-//   for (let index = 0; index < highScores.length; index++) {
-//     const makeLI = document.createElement("li");
-//     makeLI.innerText = score.name;
-//     highScoresLI.appendChild(makeLI);
-//   }
-// }
+function displayHS() {
+  for (let index = 0; index < highScores.length; index++) {
+    const makeLI = document.createElement("li");
+    makeLI.innerText = highScores[index].name + ": " + highScores[index].score;
+    highScoresLI.appendChild(makeLI);
+  }
+}
 
 // start button begins quiz and starts timer
 startBtn.addEventListener("click", function () {
