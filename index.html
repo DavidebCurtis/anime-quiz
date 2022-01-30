@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Quiz</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Timer -->
+    <div id="timer-container">
+        <h2 id="timer"></h2>
+    </div>
+    <!-- End Timer -->
+
+    <main id="main">
+
+        <!-- Highscores -->
+        <div id="highscores-container">
+            <h1>Highscores</h1>
+        </div>
+        <!-- End Highscores -->
+
+        <!-- Highscores prompt -->
+        <div id="highscores-prompt-container">
+            <h1>You're all done!</h1>
+            <p>Your final score is <span id="your-score"></span></p>
+            <p>Enter Initials</p>
+            <input type="text">
+            <button>Submit</button>
+        </div>
+        <!-- End Highscores prompt -->
+
+        <!-- Start Screen -->
+        <div id="start-container">
+            <h1 id="title">Anime Quiz Challenge</h1>
+            <p id="info">Try to answer the following anime-related questions within the time limit. Keep in mind that
+                incorrect answer
+                will penalize your score/time by <span>10 seconds</span></p>
+            <div id="btn-start-container">
+                <button id="btn-start">
+                    Start
+                </button>
+            </div>
+        </div>
+        <!-- End Start Screen -->
+
+        <!-- Question Cards -->
+        <div id="questions-container">
+            <div class="questions-card">
+                <h1 id="question"></h1>
+                <div id="answer-buttons"></div>
+            </div>
+        </div>
+        <!-- End Question Cards -->
+
+    </main>
+
+
+    <script src="assets/javascript/script.js"></script>
+</body>
+
+</html>

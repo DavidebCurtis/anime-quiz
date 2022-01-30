@@ -1,0 +1,142 @@
+body {
+  background-color: #007bff;
+}
+
+main {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+#highscores-container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 540px;
+  border-radius: 5px;
+  display: none;
+}
+
+#highscores-prompt-container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 540px;
+  border-radius: 5px;
+  display: none;
+}
+
+#start-container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 540px;
+  border-radius: 5px;
+}
+
+/* hide start container */
+#start-container-hide {
+  display: none;
+}
+
+#title {
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 2.3rem;
+  font-weight: 600;
+}
+
+#info {
+  margin: 3% 22%;
+  text-align: center;
+  font-size: 17px;
+}
+
+#info span {
+  color: #007bff;
+  font-weight: 600;
+}
+
+#btn-start-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  /* border-top: 1px solid lightgray; */
+}
+
+#btn-start {
+  color: whitesmoke;
+  background-color: #007bff;
+  margin-bottom: 3%;
+  height: 40px;
+  width: 18%;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+#btn-start:hover {
+  background-color: #0474ec;
+  cursor: pointer;
+}
+
+#questions-container {
+  background-color: white;
+  flex-direction: column;
+  align-items: center;
+  width: 540px;
+  border-radius: 5px;
+  display: none;
+}
+
+#answer-buttons {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.questions-card {
+  width: 100%;
+}
+
+#question {
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 3%;
+  text-align: center;
+  margin-bottom: 1%;
+}
+
+.btn {
+  width: 95%;
+  height: 44px;
+  margin: 2% 2%;
+  text-align: start;
+}
+
+.btn-correct {
+  background-color: rgb(54, 204, 54);
+}
+
+.btn-wrong {
+  background-color: rgb(221, 34, 34);
+}
+
+#timer-container {
+  position: absolute;
+  top: 0;
+  right: 1%;
+  color: white;
+}
