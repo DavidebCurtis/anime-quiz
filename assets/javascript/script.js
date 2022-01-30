@@ -17,7 +17,6 @@ var timer = function () {
     count = count - 1;
     if (count <= 0) {
       clearInterval(counter);
-      console.log(count);
       yourScore.innerHTML = 0;
       questionsContainer.style.display = "none";
       timerContainerEL.style.display = "none";
@@ -27,8 +26,7 @@ var timer = function () {
     if (shuffledQuestions.length < currentQuestionIndex + 1) {
       yourScore.innerHTML = count + 1;
       clearInterval(counter);
-      console.log(count);
-      highScoresPrompt.style.display = "flex";
+      setTimeout(displayHighScorePrompt, 800);
     }
 
     timerEL.innerHTML = count;
@@ -40,6 +38,13 @@ startBtn.addEventListener("click", function () {
   startQuiz();
   timer();
 });
+
+// waits and then shows high score prompt
+function displayHighScorePrompt() {
+  questionsContainer.style.display = "none";
+  timerContainerEL.style.display = "none";
+  highScoresPrompt.style.display = "flex";
+}
 
 // main function
 var startQuiz = function () {
@@ -53,12 +58,12 @@ var startQuiz = function () {
 // picks next question randomly and displays it in the element
 var displayQuestion = function () {
   reset();
-  if (shuffledQuestions.length < currentQuestionIndex + 1) {
-    questionsContainer.style.display = "none";
-    timerContainerEL.style.display = "none";
-    highScoresPrompt.style.display = "flex";
-    return;
-  }
+  //   if (shuffledQuestions.length < currentQuestionIndex + 1) {
+  //     questionsContainer.style.display = "none";
+  //     timerContainerEL.style.display = "none";
+  //     highScoresPrompt.style.display = "flex";
+  //     return;
+  //   }
   showQuestion(shuffledQuestions[currentQuestionIndex]);
   //   showQuestion(questions[0]);
 };
@@ -90,16 +95,12 @@ answerButtonsEl.addEventListener("click", function (event) {
   var whatIClicked = event.target;
 
   if (whatIClicked.dataset.correct) {
-    console.log(count + " seconds remaining");
-    console.log("hurray!");
     currentQuestionIndex++;
     whatIClicked.classList.add("btn-correct");
     setTimeout(displayQuestion, 800);
   }
   if (whatIClicked.dataset.wrong) {
     count = count - 10;
-    console.log(count + " seconds remaining");
-    console.log("Booooo you stink");
     currentQuestionIndex++;
     whatIClicked.classList.add("btn-wrong");
     setTimeout(displayQuestion, 800);

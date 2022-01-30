@@ -140,3 +140,47 @@ main {
   right: 1%;
   color: white;
 }
+
+#your-score {
+  font-weight: 600;
+  font-size: 24px;
+  color: #007bff;
+}
+
+#highscores-prompt-container h1 {
+  font-size: 44px;
+}
+
+#highscores-prompt-container p {
+  font-size: 25px;
+}
+
+#initials {
+  font-size: 20px;
+  font-weight: 549;
+  margin-bottom: 1%;
+}
+
+#highscores-prompt-container input {
+  font-size: 25px;
+  margin-bottom: 4%;
+  text-align: center;
+}
+
+#submit-hs {
+  color: whitesmoke;
+  background-color: #007bff;
+  margin-bottom: 3%;
+  height: 40px;
+  width: 18%;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 4%;
+}
+
+#submit-hs:hover {
+  background-color: #0474ec;
+  cursor: pointer;
+}
