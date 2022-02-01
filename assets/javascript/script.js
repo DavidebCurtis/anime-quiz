@@ -16,7 +16,7 @@ let shuffledQuestions, currentQuestionIndex;
 
 var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
-let count = 40;
+let count = 60;
 // Timer
 var timer = function () {
   var counter = setInterval(function () {
