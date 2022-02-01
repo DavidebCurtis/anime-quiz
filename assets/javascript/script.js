@@ -205,4 +205,13 @@ const questions = [
       { text: "Boogie Woogie", correct: true },
     ],
   },
+  {
+    question: "Sailor Moon: Who is Sailor Moon?",
+    answers: [
+      { text: "Rabbit", correct: false },
+      { text: "Popcon Machine", correct: false },
+      { text: "Bucket of water", correct: false },
+      { text: "Girl", correct: true },
+    ],
+  },
 ];
